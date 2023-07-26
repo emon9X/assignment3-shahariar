@@ -14,7 +14,11 @@
     <!-- link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- link font awesome -->
+    <script src="https://kit.fontawesome.com/684cfa0f31.js" crossorigin="anonymous"></script>
 
     <!-- link custom styling -->
     <script>
@@ -22,7 +26,7 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        navbackground: '#F85559',
                     }
                 }
             }
@@ -38,7 +42,56 @@
 </head>
 
 <body class="font-all">
+    <!-- nav large  -->
+    <nav
+        class="hidden lg:flex items-center justify-between px-12 max-w-{1440px} bg-navbackground h-[120px] rounded-[600px]">
+        <div class="flex items-center gap-7 font-medium text-[18px] text-white ">
+            <a href="">Home</a>
+            <a href="">About US</a>
+            <a href="">Shop</a>
+            <a href="">All Fruits</a>
+        </div>
+        <div class="flex items-center gap-4 ">
+            <div><img src="./images/logo.png" alt="logo"></div>
+            <h1 class="font-bold text-[40px] text-white">Fruit Burst</h1>
+        </div>
+        <div class="flex relative items-center ">
+            <input type="search" name="" id="" placeholder="Search here"
+                class="h-12 rounded-[50px] text-left pl-7 w-[400px]">
+            <svg class="absolute right-4 text-right " xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+        </div>
+    </nav>
 
+    <!-- nav mobile view  -->
+    <nav class="flex items-center justify-between mx-auto p-5 lg:hidden">
+        <div class="flex items-center gap-4 ">
+            <div>
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <h1 class="font-bold text-[21px] text-black">Fruit Burst</h1>
+        </div>
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </label>
+
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Home</a></li>
+                <li><a>About US</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+                <li> <input type="search" name="" id="" placeholder="Search here" class="text-left border-2 border-red-400"></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav complete  -->
 </body>
 
 </html>
